@@ -17,8 +17,13 @@ class SideBar extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      activeLink: "Projects",
+      activeLink: "Me",
+      showSideBar2: true,
+
     };
+  }
+  toggleSidebar = () => {
+    this.setState({ showSideBar2: !this.state.showSideBar2 });
   }
   
   render(){
@@ -30,6 +35,8 @@ class SideBar extends React.Component{
     } else if (this.state.activeLink === "Contact") {
       content = <h1>Contact Me</h1>;
     }
+
+    const containerClass = this.state.sidebarVisible ? "container with-sidebar" : "container without-sidebar";
     return(
       
       <div className="container">
@@ -64,12 +71,12 @@ class SideBar extends React.Component{
 
                   
       <ul className="sidebar">
-       <li><span>      <h2><VscFiles /> </h2></span></li>
-       <li><span>      <h2><VscGithub /> </h2></span></li>
+      <li><span onClick={() => this.setState(prevState => ({ showSidebar2: !prevState.showSidebar2 }))}><h2><VscFileCode /></h2></span></li>  
+           <a href="https://github.com/Michaeel4/"> <li><span>      <h2><VscGithub /> </h2></span></li></a>
        <li><span>      <h2><VscFileCode /> </h2></span></li>
        <li><span>      <h2><VscExtensions /> </h2></span></li>
       </ul>
-                   
+      {this.state.showSidebar2 &&           
       <ul className="sidebar2">
        <h3>Explorer</h3>
        <a href="#" onClick={() => this.setState({ activeLink: "Me" })}> <li > <span><img src={logo} className="img2"></img> me.html</span></li></a>
@@ -77,6 +84,7 @@ class SideBar extends React.Component{
        <a href="#" onClick={() => this.setState({ activeLink: "Contact" })}> <li > <span><img src={json} className="img2"></img> contacts.json</span></li></a>
        <li><span>github</span></li>
       </ul>
+  }
       <div className="content">
 
         {content}
