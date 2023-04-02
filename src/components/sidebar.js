@@ -67,9 +67,10 @@ class SideBar extends React.Component{
     } else if (this.state.activeLink === "Projects") {
       content = <div className="project-cards-container">
       <ProjectCard
-        title="Project 1"
+        title="Chip 8 Virtual Machine"
         description="This is a description of the first project."
         image={img11}
+        link="https://github.com/Michaeel4/CHIP8"
       />
       <ProjectCard
         title="Project 2"
@@ -77,14 +78,16 @@ class SideBar extends React.Component{
         image={img12}
       />
        <ProjectCard
-        title="Project 2"
+        title="Shopping Card in Ruby"
         description="This is a description of the second project."
         image="https://via.placeholder.com/300x150"
+        link="https://github.com/Michi441/RailsShoppingCard"
       />
        <ProjectCard
-        title="Project 2"
+        title="Python Marketplace"
         description="This is a description of the second project."
         image="https://via.placeholder.com/300x150"
+        link="https://github.com/Michi441/PythonMarketplace"
       />
        <ProjectCard
         title="Project 2"

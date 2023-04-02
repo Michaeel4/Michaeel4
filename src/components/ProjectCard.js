@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Card, CardContent, Typography } from '@mui/material';
 import './ProjectCard.css';
 
-const ProjectCard = ({ title, description, image }) => {
+const ProjectCard = ({ title, description, image, link }) => {
   const [showPopup, setShowPopup] = useState(false);
 
   const togglePopup = () => {
@@ -21,7 +21,7 @@ const ProjectCard = ({ title, description, image }) => {
             {description}
           </Typography>
           <div className="project-links">
-            <a href="https://github.com/user/project" target="_blank" rel="noopener noreferrer">
+            <a href={link} target="_blank" rel="noopener noreferrer">
               View on GitHub
             </a>
             
