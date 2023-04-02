@@ -3,6 +3,9 @@
     margin:0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
 .container{
     height:100vh;
     position:relative;
@@ -87,15 +90,55 @@
 }
 
 .container .content{
-    padding-top: 50px;
+    padding-top: 30px;
     color: gray;
 }
 
-.content h1 {
-
+.container.with-sidebar .content  {
   text-align: center;
-  margin-left: 250px;
+  margin-left: 300px;
 }
+
+.container.without-sidebar .content  {
+  text-align: center;
+  margin-left: 0px;
+
+  
+}
+
+.editor-container {
+  background-color: #1e1e1e;
+  display: flex;
+  padding-left: 90px;
+}
+
+.line-numbers {
+  font-family: 'Fira Code', 'Monaco', monospace;
+  font-size: 14px;
+  color: #858585;
+  background-color: #252526;
+  padding: 15px 10px;
+  margin: 0;
+  line-height: 1.5;
+  text-align: right;
+  border-right: 1px solid #333;
+}
+
+.code-content {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  color: gray;
+  background-color: #1e1e1e;
+  padding: 15px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  margin: 0;
+  text-align: left;
+}
+
+/* Add any other styling or syntax highlighting you want here */
+
+
 
 
 .img3{
