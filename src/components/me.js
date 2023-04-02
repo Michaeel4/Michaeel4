@@ -4,8 +4,11 @@ import './me.css';
 
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Me(props) {
+
+const Me = ({ setActiveLink }) => {
+    
     return (
 
         <div className="me">
@@ -27,13 +30,14 @@ function Me(props) {
         <br></br>
         <br></br>
 
-        <h1>Contact Me | See my projects</h1>
+        <h1><a href="#" onClick={() => setActiveLink("Contact")}>Contact Me | </a><a href="#" onClick={() => setActiveLink("Projects")}>Projects</a></h1>
+        <h1></h1>
 
         
 
        
 
-
+     
         </div>
         
     );

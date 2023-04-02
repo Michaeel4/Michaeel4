@@ -1,6 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import SideBar from './components/sidebar';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Me from './components/me';
+import Projects from './components/ProjectCard';
+import Contact from './components/contact';
+
 
 function App() {
   return (
@@ -20,7 +25,16 @@ function App() {
         </a>
       </header> */}
 
-      <SideBar></SideBar>
+<Router>
+  <SideBar />
+  <Routes>
+    <Route exact path="/" component={Me} />
+    <Route path="/projects" component={Projects} />
+    <Route path="/contact" component={Contact} />
+  </Routes>
+</Router>
+
+
     </div>
   );
 }

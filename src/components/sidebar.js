@@ -23,6 +23,7 @@ class SideBar extends React.Component{
       activeLink: "Me",
       showSideBar2: true,
     };
+    this.setActiveLink = this.setActiveLink.bind(this);
     this.toggleSidebar = this.toggleSidebar.bind(this);
   }
   toggleSidebar() {
@@ -48,13 +49,21 @@ class SideBar extends React.Component{
     }
     return lineNumbers;
   }
+
+  setActiveLink(newActiveLink) {
+    console.log("setActiveLink called with: " + newActiveLink);
+    this.setState({ activeLink: newActiveLink });
+  }
+
+
+  
   
   
   
   render(){
     let content;
     if (this.state.activeLink === "Me") {
-      content = Me();
+      content = <Me setActiveLink={this.setActiveLink} />;
     } else if (this.state.activeLink === "Projects") {
       content = <div className="project-cards-container">
       <ProjectCard
@@ -135,6 +144,7 @@ class SideBar extends React.Component{
       {this.state.sidebarVisible ?           
       <ul className="sidebar2">
        <h3>Explorer</h3>
+
        <a href="#" onClick={() => this.setState({ activeLink: "Me" })}> <li > <span><img src={logo} className="img2"></img> me.html</span></li></a>
        <a href="#" onClick={() => this.setState({ activeLink: "Projects" })}> <li > <span><img src={t} className="img2"></img> projects.js</span></li></a>
        <a href="#" onClick={() => this.setState({ activeLink: "Contact" })}> <li > <span><img src={json} className="img2"></img> contacts.json</span></li></a>
