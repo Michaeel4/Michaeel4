@@ -1,0 +1,60 @@
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+  }
+  
+  .contact-form-json {
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    padding: 1rem;
+    border-radius: 5px;
+    color: gray;
+    font-size: 32px;
+  }
+  
+  .contact-form {
+    margin: 0;
+  }
+  
+  .contact-form div {
+    margin: 0.5rem 0;
+  }
+
+  .contact-form div.message-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-form div.message-container textarea {
+    margin-left: 5px;
+  }
+  
+  
+  .contact-form input,
+  .contact-form textarea {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Courier New', monospace;
+    resize: none;
+    color: white;
+    font-size: 32px; /* Replace with your desired font size */
+  }
+  
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 1rem;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  

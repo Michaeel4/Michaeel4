@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.project-card {
+    background-color: black;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    margin: 16px;
+    max-width: 300px;
+    position: relative;
+
+    
+  }
+  
+  .project-title {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  
+  .project-description {
+    text-align: justify;
+  }
+  
+  /* Add a pseudo-element to create the cartridge connector */
+  .project-card::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 16px;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .project-image {
+    width: 100%;
+    object-fit: cover;
+    height: 150px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .project-cards-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 16px;
+    justify-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .project-cards-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .project-cards-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  
+
+  .MuiPaper-root.project-card {
+    background-color: #191919; 
+    color: gainsboro;
+
+
+
+}
+
+
+
+/* Override the font-family for the Typography components inside the Card */
+.MuiPaper-root.project-card .MuiTypography-root {
+    font-family: 'Press Start 2P', cursive;
+  }

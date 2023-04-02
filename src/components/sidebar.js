@@ -9,10 +9,11 @@ import t from './t.png'; // with import
 import json from './json-file.png';
 import {VscFiles, VscGithub,VscFileCode, VscExtensions  } from "react-icons/vsc";
 import  Me  from './me';
-
-
+import ProjectCard from './ProjectCard';
+import img11 from './img1.jpg';
+import img12 from './img2.jpg';
 // sidebar navbar component
-
+import ContactForm from './contact';
 
 class SideBar extends React.Component{
 
@@ -55,9 +56,41 @@ class SideBar extends React.Component{
     if (this.state.activeLink === "Me") {
       content = Me();
     } else if (this.state.activeLink === "Projects") {
-      content = <h1>Projects</h1>;
+      content = <div className="project-cards-container">
+      <ProjectCard
+        title="Project 1"
+        description="This is a description of the first project."
+        image={img11}
+      />
+      <ProjectCard
+        title="Project 2"
+        description="This is a description of the second project."
+        image={img12}
+      />
+       <ProjectCard
+        title="Project 2"
+        description="This is a description of the second project."
+        image="https://via.placeholder.com/300x150"
+      />
+       <ProjectCard
+        title="Project 2"
+        description="This is a description of the second project."
+        image="https://via.placeholder.com/300x150"
+      />
+       <ProjectCard
+        title="Project 2"
+        description="This is a description of the second project."
+        image="https://via.placeholder.com/300x150"
+      />
+       <ProjectCard
+        title="Project 2"
+        description="This is a description of the second project."
+        image="https://via.placeholder.com/300x150"
+      />
+      {/* Add more project cards as needed */}
+    </div>
     } else if (this.state.activeLink === "Contact") {
-      content = <h1>Contact Me</h1>;
+      content = <ContactForm />;
     
     }
 
@@ -105,7 +138,6 @@ class SideBar extends React.Component{
        <a href="#" onClick={() => this.setState({ activeLink: "Me" })}> <li > <span><img src={logo} className="img2"></img> me.html</span></li></a>
        <a href="#" onClick={() => this.setState({ activeLink: "Projects" })}> <li > <span><img src={t} className="img2"></img> projects.js</span></li></a>
        <a href="#" onClick={() => this.setState({ activeLink: "Contact" })}> <li > <span><img src={json} className="img2"></img> contacts.json</span></li></a>
-       <li><span>github</span></li>
       </ul>
 
       :
