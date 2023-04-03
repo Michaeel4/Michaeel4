@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Michaeel4/static/css/main.4964a9a5.css",
-    "main.js": "/Michaeel4/static/js/main.cfa9a2cd.js",
+    "main.js": "/Michaeel4/static/js/main.1cf988f3.js",
     "static/js/787.128fc6e9.chunk.js": "/Michaeel4/static/js/787.128fc6e9.chunk.js",
     "static/media/lenort1.jpg": "/Michaeel4/static/media/lenort1.4447edd6a17e84cfdfb6.jpg",
     "static/media/img1.jpg": "/Michaeel4/static/media/img1.bb2b41b5aa572b274fb8.jpg",
@@ -15,11 +15,11 @@
     "static/media/logo.svg": "/Michaeel4/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Michaeel4/index.html",
     "main.4964a9a5.css.map": "/Michaeel4/static/css/main.4964a9a5.css.map",
-    "main.cfa9a2cd.js.map": "/Michaeel4/static/js/main.cfa9a2cd.js.map",
+    "main.1cf988f3.js.map": "/Michaeel4/static/js/main.1cf988f3.js.map",
     "787.128fc6e9.chunk.js.map": "/Michaeel4/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4964a9a5.css",
-    "static/js/main.cfa9a2cd.js"
+    "static/js/main.1cf988f3.js"
   ]
 }
