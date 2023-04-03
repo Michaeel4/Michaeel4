@@ -25,7 +25,7 @@
     position:fixed;
     background-color: #1c1c1c;
     margin-top: 30px;
-    height:100vh;
+    height:100%;
     width:90px;
     z-index:10;
     text-align:center;
@@ -41,7 +41,7 @@
   background-color: #161616;
   margin-top: 30px;
   margin-left: 90px;
-  height:100vh;
+  height:100%;
   width:300px;
   z-index:10;
   text-align:left;
@@ -228,20 +228,27 @@
 
   #navbar1 .green a{
     margin-left: 10px;
-    margin-right: 10px;
+    
   }
 
   #navbar1 .left {
-    margin-left: 0px;
+    
     float: center;
     display: flex;
     align-items: center;
 
   }
+
+  #mast{
+    margin-left: 5px;
+  }
   
   #navbar1 .right {
     margin-right: 10px;
   }
+
+    
+  
 
   #navbar1 a {
     color: #efefef;
@@ -545,5 +552,28 @@
   @media(max-width: 900px) {
     #navbar ul {
       display: none;
+    }
+  }
+
+
+
+
+  @media (max-width: 768px) {
+
+  
+    
+.container .content h1 {
+  
+  font-size: 20px;
+}
+
+    #navbar1 .left{
+      margin-left: 0;
+      margin-right: 0;
+      font-size: 12px;
+    }
+    #navbar1 .right {
+      margin-right: 0px;
+      font-size: 12px;
     }
   }

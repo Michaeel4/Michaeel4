@@ -196,9 +196,9 @@ class SideBar extends React.Component{
       <div id="navbar1" class="">
       <div class="left">
         <div className="green">
-    <a href="#">Home</a>
+    <a href="#">home</a>
     </div>
-    <a href="#">master</a>
+    <a href="#" id="mast">master</a>
     
   </div>
   <div class="right">
