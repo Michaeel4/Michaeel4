@@ -228,6 +228,7 @@
 
   #navbar1 .green a{
     margin-left: 10px;
+    margin-right: 10px;
   }
 
   #navbar1 .left {
@@ -290,11 +291,7 @@
     text-align: right;
     transition: transform 0.5s ease-out;
     -webkit-transition: transform 0.5s ease-out;
-  } @media(max-width: 640px) {
-      #navbar ul {
-        display: none;
-      }
-    } @media(orientation: landscape) {
+  }  @media(orientation: landscape) {
         #navbar ul {
           display: inline-block;
         }
@@ -356,6 +353,9 @@
     /* transition: 0s; */
   }
   
+
+
+
   
   
   /*======================================================
@@ -372,6 +372,8 @@
       width: 27px;
       z-index: 12;
     }
+
+   
   
     /* Icon Bars */
     .icon-bars {
@@ -537,4 +539,11 @@
     color: rgb(28, 121, 184);
     -webkit-transition: color 0.3s ease;
     transition: color 0.3s ease;
+  }
+
+
+  @media(max-width: 900px) {
+    #navbar ul {
+      display: none;
+    }
   }

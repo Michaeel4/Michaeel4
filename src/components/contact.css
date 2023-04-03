@@ -19,6 +19,9 @@
     margin: 0;
   }
   
+ 
+
+
   .contact-form div {
     margin: 0.5rem 0;
   }
@@ -30,7 +33,12 @@
   
   .contact-form div.message-container textarea {
     margin-left: 5px;
+    font-size: 16px; /* Adjust this value as needed */
+
   }
+
+
+
   
   
   .contact-form input,
@@ -58,3 +66,12 @@ button {
     background-color: #45a049;
   }
   
+
+  @media (max-width: 500px) {
+    .contact-form-json,
+      
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 16px; /* Adjust this value as needed */
+    }
+  }

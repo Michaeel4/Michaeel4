@@ -1,3 +1,11 @@
 
 
 
+.profile-pic {
+    width: 120x; /* Adjust this value as needed */
+    height: 120px; /* Adjust this value as needed */
+    border-radius: 50%;
+    object-fit: cover;
+    float: right;
+    margin-right: 20px;
+  }

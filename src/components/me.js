@@ -5,14 +5,13 @@ import './me.css';
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-
+import profilePic from './lenort1.jpg';
 const Me = ({ setActiveLink }) => {
     
     return (
 
         <div className="me">
-        
+          <img src={profilePic} alt="Profile" className="profile-pic" />
         <h1>Hi, i'm Michael Lenort</h1>
 
         <h1>I currently study Computer Science at the Univeristy of Salzburg</h1>

@@ -12,6 +12,10 @@ import  Me  from './me';
 import ProjectCard from './ProjectCard';
 import img11 from './img1.jpg';
 import img12 from './img2.jpg';
+import reactapp from './reactapp.png';
+import shopping from './shoppingcard.jpg';
+import market from './market.jpg';
+import git from './git.png';
 // sidebar navbar component
 import ContactForm from './contact';
 
@@ -22,27 +26,38 @@ class SideBar extends React.Component{
     this.state = {
       activeLink: "Me",
       showSideBar2: true,
+      numberOfLines: 0
     };
+    this.updateNumberOfLines = this.updateNumberOfLines.bind(this);
+    window.addEventListener('resize', this.updateNumberOfLines);
     this.setActiveLink = this.setActiveLink.bind(this);
     this.toggleSidebar = this.toggleSidebar.bind(this);
+    
+
   }
   toggleSidebar() {
     this.setState((prevState) => ({
       sidebarVisible: !prevState.sidebarVisible
     }));
   }
+  componentDidMount() {
+    this.updateNumberOfLines();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateNumberOfLines);
+  }
+  
+  
+
+  updateNumberOfLines() {
+    const lineHeight = 11; // Adjust this value according to your line height
+    const windowHeight = window.innerHeight;
+    const lines = Math.floor(windowHeight / lineHeight);
+    this.setState({ numberOfLines: lines });
+  }
   generateLineNumbers(content) {
-    let lines = 0;
-  
-    if (typeof content === 'string') {
-      lines = content.split('\n').length;
-    } else if (React.isValidElement(content)) {
-      // Set the default number of lines for non-string content
-      lines = 43;
-    } else {
-      return '';
-    }
-  
+    const lines = this.state.numberOfLines;
     let lineNumbers = '';
     for (let i = 1; i <= lines; i++) {
       lineNumbers += i + '\n';
@@ -66,39 +81,40 @@ class SideBar extends React.Component{
       content = <Me setActiveLink={this.setActiveLink} />;
     } else if (this.state.activeLink === "Projects") {
       content = <div className="project-cards-container">
+        <ProjectCard
+        title="VS Code Editor Portfolio"
+        description="My personal portfolio written in React.js, with a custom VS Code Editor theme"
+        image={reactapp}
+      />
       <ProjectCard
         title="Chip 8 Virtual Machine"
         description="This is a description of the first project."
         image={img11}
         link="https://github.com/Michaeel4/CHIP8"
       />
-      <ProjectCard
-        title="Project 2"
-        description="This is a description of the second project."
-        image={img12}
-      />
+      
        <ProjectCard
         title="Shopping Card in Ruby"
-        description="This is a description of the second project."
-        image="https://via.placeholder.com/300x150"
+        description="Shopping Card written in Ruby on Rails"
+        image={shopping}
         link="https://github.com/Michi441/RailsShoppingCard"
       />
        <ProjectCard
         title="Python Marketplace"
-        description="This is a description of the second project."
-        image="https://via.placeholder.com/300x150"
+        description="E-Commerce Marketplace written in Python"
+        image={market}
         link="https://github.com/Michi441/PythonMarketplace"
       />
-       <ProjectCard
-        title="Project 2"
-        description="This is a description of the second project."
-        image="https://via.placeholder.com/300x150"
+       {/* <ProjectCard
+        title="GitHub Profile"
+        description="My University GitHub Profile"
+        image={git}
       />
        <ProjectCard
-        title="Project 2"
-        description="This is a description of the second project."
-        image="https://via.placeholder.com/300x150"
-      />
+        title="Second GitHub Profile"
+        description="My older github profile"
+        image={git}
+      /> */}
       {/* Add more project cards as needed */}
     </div>
     } else if (this.state.activeLink === "Contact") {
@@ -129,7 +145,7 @@ class SideBar extends React.Component{
       <a href="#home"><i class="fas fa-chess-knight"></i> Window</a>
     </div>
    
-    <ul id="menu">
+    <ul id="menu1">
       <li><a href="#home">Michael Lenort | VSCode Portfolio 2023</a></li>
     </ul>
   </div>
